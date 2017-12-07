@@ -37,6 +37,11 @@ import { CargoComponent } from './cargo/cargo.component';
 import { CadastroDeCargoComponent } from './cadastro-de-cargo/cadastro-de-cargo.component';
 import { ListaDeCargosComponent } from './lista-de-cargos/lista-de-cargos.component';
 
+import { AlunosService } from './alunos.service';
+import { CadastroDeAlunoComponent } from './cadastro-de-aluno/cadastro-de-aluno.component';
+import { AlunoComponent } from './aluno/aluno.component';
+import { ListaDeAlunosComponent } from './lista-de-alunos/lista-de-alunos.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -44,7 +49,8 @@ import { ListaDeCargosComponent } from './lista-de-cargos/lista-de-cargos.compon
     HttpClientModule,
     NgbModule,
     AdminRoutingModule,
-    SharedModule
+    SharedModule,
+    
   ],
   declarations: [
     HomeComponent,
@@ -68,15 +74,18 @@ import { ListaDeCargosComponent } from './lista-de-cargos/lista-de-cargos.compon
     CargoComponent,
     CadastroDeCargoComponent,
     ListaDeCargosComponent,
+    CadastroDeAlunoComponent,
+    AlunoComponent,
+   ListaDeAlunosComponent,
     
   ],
   providers: [
     DisciplinasService,
     TurmasService,
-    PessoasService,
     FuncionariosService,
     FuncoesService,
     CargosService,
+    AlunosService,
     
   ]
 })

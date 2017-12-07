@@ -1,0 +1,29 @@
+<a routerLink="/admin/alunos/0/novo" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Cadastrar</a>
+<h1>Lista de alunos</h1>
+<hr>
+<div class="alert alert-success" *ngIf="excluir_ok">
+    <strong>Sucesso!</strong> O aluno foi excluído com sucesso.
+</div>
+<div class="alert alert-danger" *ngIf="excluir_erro">
+    <strong>Ops!</strong> Ocorreu um erro ao tentar excluir o aluno. Aguarde alguns instantes e tente novamente.
+</div>
+<table class="table table-bordered table-striped table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th width="80">Id</th>
+        <th>Nome</th>
+        <th width="250">Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let aluno of alunos">
+        <td>{{aluno.id}}</td>
+        <td>{{aluno.nome}}</td>
+        <td>
+            <a [routerLink]="['/admin/alunos', aluno.id]" class="btn btn-primary btn-sm">Abrir</a>
+            <a [routerLink]="['/admin/alunos', aluno.id, 'editar']" class="btn btn-secondary btn-sm">Editar</a>
+            <a href="javascript:void(0)" class="btn btn-danger btn-sm" (click)="excluir(aluno)">Excluir</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
