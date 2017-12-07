@@ -1,0 +1,52 @@
+<a routerLink="/admin/cadastrar-cargo" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Cadastrar</a>
+<h1>Lista de cargos</h1>
+<div class="row">
+  <div class="col-9">
+    <div class="mb-2">
+      <form class="form-inline" #formPesquisa="ngForm" (submit)="pesquisar()">
+        <div class="col-12 p-0">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pesquisar por..." aria-label="Pesquisar por..." name="q" [(ngModel)]="q">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" width="80">#</th>
+          <th scope="col" width="100">Nome</th>
+          <th scope="col" >Funções</th>
+          <th scope="col" width="120">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cargo of cargos">
+          <th scope="row">{{cargo.id}}</th>
+          <td>{{cargo.nome}}</td>
+          <td>
+            <ul><li *ngFor="let funcao of funcoes">
+                {{funcao.nome}}
+              </li>
+            </ul>
+          </td>
+          
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="excluir(cargo)">
+              <i class="fa fa-trash"></i>
+            </button>
+            <button class="btn btn-primary btn-sm" (click)="abrir(cargo)">
+              <i class="fa fa-eye"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

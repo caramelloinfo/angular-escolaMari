@@ -1,0 +1,36 @@
+<h1>Cadastro de cargo</h1>
+<div class="alert alert-success" *ngIf="cadastro_ok">
+  <strong>Cadastro realizado com sucesso! </strong> <a routerLink="/admin/cargos">Voltar para a lista de cargos</a>
+</div>
+<div class="alert alert-danger" *ngIf="cadastro_erro">
+  <strong>Opa!</strong> Aconteceu um erro ao tentar fazer o cadastro. Aguarde alguns instantes e tente novamente.
+</div>
+<form #cadastro="ngForm" (submit)="salvar()">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" class="form-control" [(ngModel)]="nome" required>
+  </div>
+  <div class="form-group">
+    <label for="funcao">Funções</label>
+    <!--<select name="funcao" id="funcao" class="form-control" [(ngModel)]="funcao" required>
+          <option>...</option>
+          <option *ngFor="let funcao of funcoes" [value]="funcao.id">{{funcao.nome}}</option>
+    </select>-->
+
+    <select multiple class="form-control" id="exampleFormControlSelect2" [(ngModel)]="funcao" required>
+        <option>...</option>
+        <option *ngFor="let funcao of funcoes" [value]="funcao.id">{{funcao.nome}}</option>
+      </select>
+
+
+
+
+
+
+  </div>
+  <button class="btn btn-primary" [disabled]="!cadastro.valid">Salvar</button>
+</form>
+<!--public id: number,
+              public codigo: string,
+              public pessoa: Pessoa,
+              public tipo: String-->
