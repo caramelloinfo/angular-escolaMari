@@ -21,13 +21,13 @@ export class DisciplinasService {
     return this.http.get(this.API_URL + '/disciplinas/' + id + '?_embed=turmas');
   }
 
-  addDisciplina(nome: string, descricao: string): Observable<any> {
-    const disciplina = {nome: nome, descricao: descricao};
+  addDisciplina(nome: string): Observable<any> {
+    const disciplina = {nome: nome};
     return this.http.post(this.API_URL + '/disciplinas', disciplina);
   }
 
-  updateDisciplina(id: number, nome: string, descricao: string): Observable<any> {
-    const disciplina = {nome: nome, descricao: descricao};
+  updateDisciplina(id: number, nome: string): Observable<any> {
+    const disciplina = {nome: nome};
     return this.http.patch(this.API_URL + '/disciplinas/' + id, disciplina);
   }
 

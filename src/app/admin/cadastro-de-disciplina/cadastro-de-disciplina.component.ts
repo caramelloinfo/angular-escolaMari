@@ -25,16 +25,15 @@ export class CadastroDeDisciplinaComponent implements OnInit {
     if (this.id) {
       this.disciplinasService.getDisciplina(this.id)
         .subscribe(disciplina => {
-          this.codigo = disciplina.codigo;
           this.nome = disciplina.nome;
-          this.descricao = disciplina.descricao;
+          
         });
     }
   }
 
   salvar() {
     if (this.id) {
-      this.disciplinasService.updateDisciplina(this.id, this.codigo, this.nome, this.descricao)
+      this.disciplinasService.updateDisciplina(this.id, this.nome)
         .subscribe(disciplina => {
             this.atualizar_ok = true;
             this.atualizar_erro = false;
@@ -44,14 +43,13 @@ export class CadastroDeDisciplinaComponent implements OnInit {
             this.atualizar_erro = true;
           });
     } else {
-      this.disciplinasService.addDisciplina(this.codigo, this.nome, this.descricao)
+      this.disciplinasService.addDisciplina(this.nome)
         .subscribe(disciplina => {
             console.log(disciplina);
             this.cadastro_ok = true;
             this.cadastro_erro = false;
-            this.codigo = null;
             this.nome = null;
-            this.descricao = null;
+            
           },
           erro => {
             this.cadastro_ok = false;

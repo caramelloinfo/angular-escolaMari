@@ -13,22 +13,14 @@ import {TurmaComponent} from './turma/turma.component';
 import {CadastroDeDisciplinaComponent} from './cadastro-de-disciplina/cadastro-de-disciplina.component';
 import {CadastroDeTurmaComponent} from './cadastro-de-turma/cadastro-de-turma.component';
 
-
-import { FuncionarioComponent } from './funcionario/funcionario.component';
-import { CadastroDeFuncionarioComponent } from './cadastro-de-funcionario/cadastro-de-funcionario.component';
-import { ListaDeFuncionariosComponent } from './lista-de-funcionarios/lista-de-funcionarios.component';
-
-import { CadastroDeFuncaoComponent } from './cadastro-de-funcao/cadastro-de-funcao.component';
-import { FuncaoComponent } from './funcao/funcao.component';
-import { ListaDeFuncoesComponent } from './lista-de-funcoes/lista-de-funcoes.component';
-
-import { CargoComponent } from './cargo/cargo.component';
-import { CadastroDeCargoComponent } from './cadastro-de-cargo/cadastro-de-cargo.component';
-import { ListaDeCargosComponent } from './lista-de-cargos/lista-de-cargos.component';
-
 import { AlunoComponent } from './aluno/aluno.component';
 import { CadastroDeAlunoComponent } from './cadastro-de-aluno/cadastro-de-aluno.component';
 import { ListaDeAlunosComponent } from './lista-de-alunos/lista-de-alunos.component';
+
+import { ProfessorComponent } from './professor/professor.component';
+import { CadastroDeProfessorComponent } from './cadastro-de-professor/cadastro-de-professor.component';
+import { ListaDeProfessoresComponent } from './lista-de-professores/lista-de-professores.component';
+
 
 import {PaginaNaoEncontradaComponent} from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 
@@ -43,21 +35,17 @@ const routes: Routes = [
       {path: 'cadastrar-turma', component: CadastroDeTurmaComponent},
       {path: 'turmas', component: ListaDeTurmasComponent},
       {path: 'turmas/:id', component: TurmaComponent},
-      {path: 'cadastrar-funcionario', component: CadastroDeFuncionarioComponent},
-      {path: 'funcionarios', component: ListaDeFuncionariosComponent},
-      {path: 'funcionarios/:id', component: FuncionarioComponent},
-      {path: 'funcoes', component: ListaDeFuncoesComponent},
-      {path: 'funcoes/:id', component: FuncaoComponent},
-      {path: 'funcoes/:id/novo', component: CadastroDeFuncaoComponent},
-      {path: 'funcoes/:id/editar', component: CadastroDeFuncaoComponent},
-      {path: 'cadastrar-cargo', component: CadastroDeCargoComponent},
-      {path: 'cargos', component: ListaDeCargosComponent},
-      {path: 'cargos/:id', component: CargoComponent},
-
+      
       {path: 'alunos', component: ListaDeAlunosComponent},
       {path: 'alunos/:id', component: AlunoComponent},
       {path: 'alunos/:id/novo', component: CadastroDeAlunoComponent},
       {path: 'alunos/:id/editar', component: CadastroDeAlunoComponent},
+
+      {path: 'professores', component: ListaDeProfessoresComponent},
+      {path: 'professores/:id', component: ProfessorComponent},
+      {path: 'professores/:id/novo', component: CadastroDeProfessorComponent},
+      {path: 'professores/:id/editar', component: CadastroDeProfessorComponent},
+
       
       {path: '', component: HomeComponent},
       {path: '**', component: PaginaNaoEncontradaComponent}
