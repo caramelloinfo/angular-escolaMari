@@ -1,0 +1,25 @@
+<a routerLink="/admin/frequencias/cadastrar" class="btn btn-primary pull-right">
+  <i class="fa fa-plus"></i> Cadastrar</a>
+<h1>Relatório geral de frequência</h1>
+<div class="row">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Turma</th>
+        <th scope="col">Disciplina</th>
+        <th scope="col">Professor</th>
+        <th scope="col">Aluno</th>
+        <th scope="col">Qtd Presença/Falta</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let frequencia of frequencias">
+        <td>{{frequencia.turma.codigo}}</td>
+        <td>{{frequencia.disciplina.nome}}</td>
+        <td>{{frequencia.professor.nome}}</td>
+        <td>{{frequencia.aluno.nome}}</td>
+        <td>{{frequencia.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
