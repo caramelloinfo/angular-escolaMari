@@ -11,6 +11,7 @@ import {SharedModule} from '../shared/shared.module';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { CadastroDeFrequenciaComponent } from './cadastro-de-frequencia/cadastro-de-frequencia.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
+
 //import { RelatorioComponent } from './relatorio/relatorio.component';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RelatorioComponent } from './relatorio/relatorio.component';
     HttpClientModule,
     NgbModule,
     AdminRoutingModule,
-    SharedModule
+    SharedModule,
+    
   ],
   declarations: [
     HomeComponent,

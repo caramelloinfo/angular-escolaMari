@@ -8,6 +8,11 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class EscolaService {
   API_URL = 'http://localhost:3000';
+  cont = 0;
+  frequencia = (this.API_URL + '/frequencias/');
+  aluno = (`${this.API_URL}/alunos/`);
+  
+  
 
   constructor(private http: HttpClient) {
   }
@@ -40,7 +45,11 @@ export class EscolaService {
   }
 
   getFrequenciaId(id: number): Observable<any> {
+    
     return this.http.get(this.API_URL + '/frequencias/' + id);
+
+
+    
   }
 
   addFrequencia(turmaId: number, alunoId: number, disciplinaId: number, professorId: number, 

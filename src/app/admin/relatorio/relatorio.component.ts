@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {EscolaService} from '../escola.service';
+import { Router } from '@angular/router';
+import { EscolaService } from '../escola.service';
 
 @Component({
   selector: 'app-relatorio',
@@ -11,11 +11,12 @@ export class RelatorioComponent implements OnInit {
   frequencias = [];
 
   constructor(private escolaService: EscolaService,
-              private router: Router) { }
+    private router: Router) { }
 
   ngOnInit() {
     this.escolaService.getFrequencias()
-    .subscribe(frequencias => this.frequencias = frequencias)
+      .subscribe(frequencias => this.frequencias = frequencias)
+      
   }
 
 }
