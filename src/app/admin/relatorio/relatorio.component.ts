@@ -9,6 +9,7 @@ import { EscolaService } from '../escola.service';
 })
 export class RelatorioComponent implements OnInit {
   frequencias = [];
+  frequencia: any[];
 
   constructor(private escolaService: EscolaService,
     private router: Router) { }
@@ -16,7 +17,7 @@ export class RelatorioComponent implements OnInit {
   ngOnInit() {
     this.escolaService.getFrequencias()
       .subscribe(frequencias => this.frequencias = frequencias)
-      
+     
   }
 
 }

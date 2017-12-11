@@ -9,16 +9,26 @@
         <th scope="col">Disciplina</th>
         <th scope="col">Professor</th>
         <th scope="col">Aluno</th>
-        <th scope="col">Qtd Presença/Falta</th>
+        <th scope="col">Qtd Presença</th>
+        <th scope="col">Qtd Falta</th>
+
+   
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let frequencia of frequencias">
-        <td>{{frequencia.turma.codigo}}</td>
-        <td>{{frequencia.disciplina.nome}}</td>
-        <td>{{frequencia.professor.nome}}</td>
-        <td>{{frequencia.aluno.nome}}</td>
-        <td>{{frequencia.status}}</td>
+      <tr *ngFor="let item of frequencias">
+        <td>{{item.turma.codigo}}</td>
+        <td>{{item.disciplina.nome}}</td>
+        <td>{{item.professor.nome}}</td>
+        <td>{{item.aluno.nome}}</td>
+        <td class="text-center">
+          <p *ngIf="item.status === 'P'">1</p>
+          <p *ngIf="item.status != 'P'">0</p>
+        </td>
+        <td class="text-center">
+          <p *ngIf="item.status === 'F'">0</p>
+          <p *ngIf="item.status != 'F'">1</p>
+        </td>
       </tr>
     </tbody>
   </table>

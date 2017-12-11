@@ -41,7 +41,7 @@ export class EscolaService {
   }
 
   getFrequencias(): Observable<any[]> {
-    return this.http.get<any[]>(this.API_URL + '/frequencias?_expand=turma&_expand=professor&_expand=disciplina&_expand=aluno');
+    return this.http.get<any[]>(this.API_URL + '/frequencias?_expand=turma&_expand=professor&_expand=disciplina&_expand=aluno&_expand=horario');
   }
 
   getFrequenciaId(id: number): Observable<any> {
