@@ -43,9 +43,7 @@ export class EscolaService {
   getFrequenciaId(id: number): Observable<any> {
     
     return this.http.get(this.API_URL + '/frequencias/' + id);
-
-
-    
+   
   }
 
   addFrequencia(turmaId: number, alunoId: number, disciplinaId: number, professorId: number, 
