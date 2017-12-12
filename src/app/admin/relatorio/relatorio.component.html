@@ -23,11 +23,11 @@
         <td>{{item.aluno.nome}}</td>
         <td class="text-center">
           <p *ngIf="item.status === 'P'">1</p>
-          <p *ngIf="item.status != 'P'">0</p>
+          <p *ngIf="item.status != 'P'">-</p>
         </td>
         <td class="text-center">
-          <p *ngIf="item.status === 'F'">0</p>
-          <p *ngIf="item.status != 'F'">1</p>
+          <p *ngIf="item.status === 'F'">1</p>
+          <p *ngIf="item.status != 'F'">-</p>
         </td>
       </tr>
     </tbody>
