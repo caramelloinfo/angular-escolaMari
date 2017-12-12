@@ -9,8 +9,7 @@ import { EscolaService } from '../escola.service';
 })
 export class RelatorioComponent implements OnInit {
   frequencias = [];
-  frequencia: any[];
-
+  
   constructor(private escolaService: EscolaService,
     private router: Router) { }
 

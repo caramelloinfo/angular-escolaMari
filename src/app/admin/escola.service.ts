@@ -8,11 +8,7 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class EscolaService {
   API_URL = 'http://localhost:3000';
-  cont = 0;
-  frequencia = (this.API_URL + '/frequencias/');
-  aluno = (`${this.API_URL}/alunos/`);
-  
-  
+   
 
   constructor(private http: HttpClient) {
   }
