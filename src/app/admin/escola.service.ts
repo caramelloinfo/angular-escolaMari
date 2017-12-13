@@ -15,6 +15,15 @@ export class EscolaService {
   getTurmas(): Observable<any[]> {
     return this.http.get<any[]>(this.API_URL + '/turmas/');
   }
+  getTurmasRelatorio(): Observable<any[]> {
+    return this.http.get<any[]>(this.API_URL + '/professoresNasTurmas/');
+  }
+
+  getTurmaId(id: number): Observable<any> {
+    
+    return this.http.get(this.API_URL + '/turmas/' + id);
+   
+  }
 
   getProfessores(): Observable<any[]> {
     return this.http.get<any[]>(this.API_URL + '/professors/');

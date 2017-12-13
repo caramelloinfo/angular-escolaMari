@@ -1,3 +1,7 @@
+12/12/2017
+
+C:\Users\lpweb.pmw\AppData\Roaming\npm\ng
+
 - implementar lista para conter editar, ver, e excluir
 - retornar a disciplina de uma turma
 - retornar o professor de uma turma
@@ -7,4 +11,8 @@
     /matriculas?turmaId=1&_expand=aluno
 
 ** '/frequencias?_expand=turma&_expand=professor&_expand=disciplina&_expand=aluno&_expand=horario');
+
+___tarefinha___
+tumas:
+- código - professores - quantidade de alunos
 

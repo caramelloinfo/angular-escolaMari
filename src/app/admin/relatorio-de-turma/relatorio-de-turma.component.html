@@ -1,0 +1,22 @@
+<a routerLink="/admin/turmas/cadastrar" class="btn btn-primary pull-right">
+  <i class="fa fa-plus"></i> Cadastrar</a>
+<h1>Relatório de Turmas</h1>
+<div class="row">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Professores</th>
+        <th scope="col">Quant. de Alunos</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of turmas">
+        <td>{{item.codigo}}</td>
+        
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

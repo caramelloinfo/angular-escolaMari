@@ -11,6 +11,7 @@ import {SharedModule} from '../shared/shared.module';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { CadastroDeFrequenciaComponent } from './cadastro-de-frequencia/cadastro-de-frequencia.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
+import { RelatorioDeTurmaComponent } from './relatorio-de-turma/relatorio-de-turma.component';
 
 //import { RelatorioComponent } from './relatorio/relatorio.component';
 
@@ -30,6 +31,7 @@ import { RelatorioComponent } from './relatorio/relatorio.component';
     CadastroDeFrequenciaComponent,
     PaginaNaoEncontradaComponent,
     RelatorioComponent,
+    RelatorioDeTurmaComponent,
     //RelatorioComponent
   ],
   providers: [
